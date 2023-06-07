@@ -1,5 +1,6 @@
 package GB_Java_Homework.Homework_1;
 
+
 import java.util.Random;
 
 public class Task1 {
