@@ -1,7 +1,3 @@
-import java.net.SocketPermission;
-
-import javax.swing.plaf.synth.SynthToggleButtonUI;
-
 public class App {
     public static void main(String[] args){
 
@@ -38,8 +34,9 @@ public class App {
         String[] arr_a = a.split("}");
         for (int n=0; n < arr_a.length-1; n++) System.out.println(Parse_Func(arr_a[n]));
         
-        System.out.println();
+        
         //*Сравнить время выполнения замены символа "а" на "А" любой строки содержащей >1000 символов средствами String и StringBuilder
+        System.out.println();
         String ss = "";
         long start = System.currentTimeMillis();        
         for (int i = 0; i < 1000; i++) ss+=Character.getName(i);
@@ -66,8 +63,6 @@ public class App {
         start = System.currentTimeMillis();
         bb = new StringBuilder(bb.toString().replace('a', 'A'));
         System.out.println(System.currentTimeMillis() - start);
-   
-
     }
 
     static String Parse_Func(String a){
