@@ -1,18 +1,22 @@
-## Getting Started
+# Урок 2. Почему вы не можете не использовать API
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Формат сдачи: ссылка на подписанный git-проект.
 
-## Folder Structure
+Задание
 
-The workspace contains two folders by default, where:
+Дана строка sql-запроса "select * from students where ". Сформируйте часть WHERE этого запроса, используя StringBuilder. Данные для фильтрации приведены ниже в виде json-строки.
+Если значение null, то параметр не должен попадать в запрос.
+Параметры для фильтрации: {"name":"Ivanov", "country":"Russia", "city":"Moscow", "age":"null"}
+В итоге должно получится select * from students where name=Ivanov, country=Russia, city=Moscow
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Дополнительные задания
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Дана json-строка (можно сохранить в файл и читать из файла)
+[{"фамилия":"Иванов","оценка":"5","предмет":"Математика"},{"фамилия":"Петрова","оценка":"4","предмет":"Информатика"},{"фамилия":"Краснов","оценка":"5","предмет":"Физика"}]
+Написать метод(ы), который распарсит json и, используя StringBuilder, создаст строки вида: Студент [фамилия] получил [оценка] по предмету [предмет].
+Пример вывода:
+Студент Иванов получил 5 по предмету Математика.
+Студент Петрова получил 4 по предмету Информатика.
+Студент Краснов получил 5 по предмету Физика.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+*Сравнить время выполнения замены символа "а" на "А" любой строки содержащей >1000 символов средствами String и StringBuilder.
