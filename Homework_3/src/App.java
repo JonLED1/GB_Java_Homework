@@ -21,6 +21,7 @@ public class App {
         System.out.println("Максимальное значение = " + Collections.max(list));
         System.out.println("Среднее арифметическое = " + average(list));
     }
+    
     static double average (ArrayList<Integer> list) {
             double sum = 0;
             for(int i=0;i<list.size();i++) sum+=list.get(i);
