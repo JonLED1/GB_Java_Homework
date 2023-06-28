@@ -45,10 +45,6 @@ class SetImit<E> {
         return map.containsKey(num);
     }
 
-    public Iterator<E> iterator() {
-        return map.keySet().iterator();
-    }
-
     public E getElementByIndex(int index) {
         E[] mapArray = (E[]) map.keySet().toArray();
         return mapArray[index];
